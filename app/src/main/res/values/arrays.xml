@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string-array name="test_array">
+        <item>Jerry1</item>
+        <item>Tom</item>
+        <item>Jim</item>
+        <item>LiLei</item>
+        <item>Susu</item>
+    </string-array>
+
+
+    <string-array name="test_array_2">
+        <item>Java</item>
+        <item>c++</item>
+        <item>Kotlin</item>
+        <item>Shell</item>
+        <item>React Native</item>
+    </string-array>
+</resources>

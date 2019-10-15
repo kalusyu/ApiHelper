@@ -1,0 +1,5 @@
+
+bsquid:S11923"FDefine a constant instead of duplicating this literal "title" 4 times.(«›»‚ùÿÿÿÿ
+nsquid:S3776>"RRefactor this method to reduce its Cognitive Complexity from 28 to the 15 allowed.(³ô «ýÿÿÿÿ
+osquid:ModifiersOrderCheckw"EReorder the modifiers to comply with the Java Language Specification.(è®¼¨ùÿÿÿÿ
+vsquid:S2293Ž"YReplace the type specification in this constructor call with the diamond operator ("<>").(ÈÐêÞøÿÿÿÿ

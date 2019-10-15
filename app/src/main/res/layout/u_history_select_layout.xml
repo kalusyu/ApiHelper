@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <com.sz.ucar.bwued.lib.historyselect.UHistorySelectLayout
+        android:id="@+id/history_select_container"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dd_dimen_26px"
+        app:hs_column="2"
+        app:hs_max_length="6"
+        app:hs_style="normal"
+        app:hs_title="最近选择" />
+
+    <com.sz.ucar.bwued.lib.historyselect.UHistorySelectLayout
+        android:id="@+id/history_select_container2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dd_dimen_56px"
+        app:hs_column="1"
+        app:hs_max_length="9"
+        app:hs_style="search"
+        app:hs_title="最近搜索" />
+
+</LinearLayout>

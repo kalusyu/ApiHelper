@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data class="MydataBinding">
+
+        <!--<variable
+            name="userInfo"
+            type="com.example.databindingdemo.User" />-->
+        <import type="com.example.databindingdemo.User"/>
+        <import type="com.example.databindingdemo.Goods"/>
+        <import type="com.example.databindingdemo.MainActivity.GoodsHandler"/>
+
+        <variable
+            name="userInfo"
+            type="User" />
+
+        <variable
+            name="goods"
+            type="Goods" />
+
+        <variable
+            name="goodsHandler"
+            type="GoodsHandler" />
+
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".MainActivity">
+
+        <TextView
+            android:id="@+id/first_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@{goods.name,default=kalusyu}"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/third_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@{goods.details,default=kalusyu}"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:layout_marginTop="100dp"/>
+
+        <TextView
+            android:id="@+id/second_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@{String.valueOf(goods.price),default=100}"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:layout_marginTop="200dp"/>
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="@{()->goodsHandler.changeGoodsName()}"
+            android:text="changeName"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:layout_marginTop="300dp"/>
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="@{()->goodsHandler.changeGoodsDetails()}"
+            android:text="changeDetails"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:layout_marginTop="450dp"/>
+
+
+
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

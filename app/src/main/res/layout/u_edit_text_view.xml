@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <com.sz.ucar.bwued.lib.UEditTextView
+        android:id="@+id/mEditTextView3"
+        android:layout_width="@dimen/dd_dimen_300px"
+        android:layout_height="@dimen/dd_dimen_100px"
+        android:gravity="center_vertical"
+        android:maxLines="10"
+        android:text="password123"
+        app:editable="true"
+        app:clearable="false"
+        app:copyable="true" />
+
+</LinearLayout>

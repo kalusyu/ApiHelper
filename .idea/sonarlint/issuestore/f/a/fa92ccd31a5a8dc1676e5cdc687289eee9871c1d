@@ -1,0 +1,5 @@
+
+hsquid:MaximumInheritanceDepth"<This class has 6 parents which is greater than 5 authorized.(ËŸ‹³ýÿÿÿÿ
+Tsquid:S1854"8Remove this useless assignment to local variable "view".(µÙÜ±8§“‹Ø-
+Esquid:S1481")Remove this unused "view" local variable.(µÙÜ±8§“‹Ø-
+lsquid:CommentedOutCodeLine"<This block of commented-out lines of code should be removed.(ŽÍ‡îúÿÿÿÿ8§“‹Ø-

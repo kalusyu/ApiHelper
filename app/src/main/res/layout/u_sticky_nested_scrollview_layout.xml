@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+
+<com.sz.ucar.bwued.lib.UStickyNestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/scroll_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:scrollbars="none">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:focusable="true"
+        android:focusableInTouchMode="true"
+        android:orientation="vertical">
+
+        <!--子view布局省略-->
+        <TextView
+            android:id="@+id/u_tv1"
+            android:layout_width="wrap_content"
+            android:layout_height="200dp"
+            android:text="I'm the first" />
+
+        <TextView
+            android:id="@+id/u_tv2"
+            android:layout_width="wrap_content"
+            android:layout_height="200dp"
+            android:text="我要吸顶" />
+
+        <TextView
+            android:id="@+id/u_tv3"
+            android:layout_width="wrap_content"
+            android:layout_height="200dp"
+            android:text="老二都吸了，我也吸" />
+
+        <TextView
+            android:id="@+id/u_tv4"
+            android:layout_width="wrap_content"
+            android:layout_height="200dp"
+            android:text="我不吸" />
+
+        <TextView
+            android:id="@+id/u_tv5"
+            android:layout_width="wrap_content"
+            android:layout_height="200dp"
+            android:text="揍你" />
+
+        <TextView
+            android:id="@+id/u_tv6"
+            android:layout_width="wrap_content"
+            android:layout_height="200dp"
+            android:text="2" />
+
+
+        <TextView
+            android:id="@+id/u_tv7"
+            android:layout_width="wrap_content"
+            android:layout_height="200dp"
+            android:text="3" />
+
+        <TextView
+            android:id="@+id/u_tv8"
+            android:layout_width="wrap_content"
+            android:layout_height="200dp"
+            android:text="4" />
+
+        <TextView
+            android:id="@+id/u_tv9"
+            android:layout_width="wrap_content"
+            android:layout_height="200dp"
+            android:text="5" />
+
+        <TextView
+            android:id="@+id/u_tv10"
+            android:layout_width="wrap_content"
+            android:layout_height="200dp"
+            android:text="6" />
+
+        <TextView
+            android:id="@+id/u_tv11"
+            android:layout_width="wrap_content"
+            android:layout_height="200dp"
+            android:text="1" />
+
+        <TextView
+            android:id="@+id/u_tv12"
+            android:layout_width="wrap_content"
+            android:layout_height="200dp"
+            android:text="1" />
+
+
+    </LinearLayout>
+</com.sz.ucar.bwued.lib.UStickyNestedScrollView>

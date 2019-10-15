@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <com.sz.ucar.bwued.lib.forminput.UFormInputLayout
+        android:id="@+id/device_input"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/u_color_ffffff"
+        app:action_icon="@drawable/u_fii_action"
+        app:action_margin_right="@dimen/dd_dimen_40px"
+        app:content_type="digit"
+        app:enable="true"
+        app:hint="请输入"
+        app:label="设备编号"
+        app:margin_right="@dimen/dd_dimen_96px"
+        app:max_length="20"
+        app:type="manual" />
+
+</LinearLayout>

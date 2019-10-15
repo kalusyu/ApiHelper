@@ -1,0 +1,241 @@
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.sz.ucar.lib.demo">
+
+    <application
+        android:name=".kitt.common.KittApplicationDemo"
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity android:name="com.sz.ucar.lib.demo.BwuedDemos">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <activity
+            android:name=".UDividerLinearLayoutDemo"
+            android:label="UDividerLinearLayout">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.SAMPLE_CODE" />
+            </intent-filter>
+        </activity>
+
+        <activity
+            android:name=".UDropDownMenuDemo"
+            android:label="UDropDownMenu">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.SAMPLE_CODE" />
+            </intent-filter>
+        </activity>
+
+        <activity
+            android:name=".UCalenderViewDemo"
+            android:label="UCalenderView"
+            android:theme="@style/AppTheme.Activity1">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.SAMPLE_CODE" />
+            </intent-filter>
+        </activity>
+
+        <activity
+            android:name=".UEditTextViewDemo"
+            android:label="UEditTextView">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.SAMPLE_CODE" />
+            </intent-filter>
+        </activity>
+
+
+        <activity
+            android:name=".UTitledGridPhotoViewDemo"
+            android:label="UTitledGridPhotoView">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.SAMPLE_CODE" />
+            </intent-filter>
+        </activity>
+
+
+        <activity
+            android:name=".UStickyNestedScrollViewDemo"
+            android:label="UStickyNestedScrollView">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.SAMPLE_CODE" />
+            </intent-filter>
+        </activity>
+
+        <activity
+            android:name=".USlideItemLayoutDemo"
+            android:label="USlideItemLayout">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.SAMPLE_CODE" />
+            </intent-filter>
+        </activity>
+
+        <activity
+            android:name=".USelectGroupDemo"
+            android:label="USelectGroup">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.SAMPLE_CODE" />
+            </intent-filter>
+        </activity>
+
+
+        <activity
+            android:name=".USearchInputLayoutDemo"
+            android:label="USearchInputLayout">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.SAMPLE_CODE" />
+            </intent-filter>
+        </activity>
+
+        <activity
+            android:name=".ULoadingSwitchDemo"
+            android:label="ULoadingSwitch">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.SAMPLE_CODE" />
+            </intent-filter>
+        </activity>
+
+        <activity
+            android:name=".ULoadingButtonDemo"
+            android:label="ULoadingButton">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.SAMPLE_CODE" />
+            </intent-filter>
+        </activity>
+
+
+        <activity
+            android:name=".ULabelLayoutDemo"
+            android:label="ULabelLayout">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.SAMPLE_CODE" />
+            </intent-filter>
+        </activity>
+
+        <activity
+            android:name=".UHistorySelectLayoutDemo"
+            android:label="UHistorySelectLayout">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.SAMPLE_CODE" />
+            </intent-filter>
+        </activity>
+
+        <activity
+            android:name=".UFormLayoutDemo"
+            android:label="UFormLayout">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.SAMPLE_CODE" />
+            </intent-filter>
+        </activity>
+
+
+        <activity
+            android:name=".UGridPhotoViewDemo"
+            android:label="UGridPhotoView">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.SAMPLE_CODE" />
+            </intent-filter>
+        </activity>
+
+        <activity
+            android:name=".UFormInputLayoutDemo"
+            android:label="UFormInputLayout">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.SAMPLE_CODE" />
+            </intent-filter>
+        </activity>
+
+        <activity
+            android:name=".UFormAreaInputDemo"
+            android:label="UFormAreaInput">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.SAMPLE_CODE" />
+            </intent-filter>
+        </activity>
+
+
+        <activity
+            android:name=".USelectionLayoutDemo"
+            android:label="USelectionLayout">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.SAMPLE_CODE" />
+            </intent-filter>
+        </activity>
+
+
+        <activity
+            android:name=".BaseDropDownMenuListActivityDemo"
+            android:label="BaseDropDownMenuListActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.SAMPLE_CODE" />
+            </intent-filter>
+        </activity>
+
+        <activity
+            android:name=".kitt.common.KittActivityDemo"
+            android:label="KITT/KittActivityDemo">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.SAMPLE_CODE" />
+            </intent-filter>
+        </activity>
+
+        <activity
+            android:name=".butterknife.ButterKnifeDemo"
+            android:label="ButterKnife/ButterKnifeDemo">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.SAMPLE_CODE" />
+            </intent-filter>
+        </activity>
+
+        <activity
+            android:name=".UTipsDemo"
+            android:label="UTipsDemo">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.SAMPLE_CODE" />
+            </intent-filter>
+        </activity>
+
+        <activity
+            android:name=".FolderRecyclerVIewActivity"
+            android:label="FolderRecyclerVIewActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.SAMPLE_CODE" />
+            </intent-filter>
+        </activity>
+
+
+        <activity android:name=".kitt.common.MyRouterActivity"></activity>
+
+        <activity android:name=".kitt.common.MyAnotherRouterActivity"></activity>
+
+    </application>
+</manifest>

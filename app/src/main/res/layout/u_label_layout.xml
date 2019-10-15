@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <com.sz.ucar.bwued.lib.ULabelLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:drawableStart="@drawable/ic_launcher_background"
+        android:drawableEnd="@drawable/ic_launcher_background"
+        android:drawablePadding="@dimen/dd_dimen_20px"
+        android:padding="@dimen/dd_dimen_20px"
+        android:text="居label右边1">
+
+        <com.sz.ucar.bwued.lib.UEditTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/dd_dimen_20px"
+            android:background="@color/u_color_c6c6c6"
+            android:drawablePadding="@dimen/dd_dimen_20px"
+            android:text="password123"
+            app:copyable="true" />
+    </com.sz.ucar.bwued.lib.ULabelLayout>
+
+</LinearLayout>

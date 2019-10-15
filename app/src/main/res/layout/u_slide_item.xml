@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <!--菜单布局-->
+    <TextView android:id="@+id/delete_text"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/u_color_f12e49"
+        android:gravity="center"
+        android:paddingStart="@dimen/dd_dimen_32px"
+        android:paddingEnd="@dimen/dd_dimen_32px"
+        android:text="删除"
+        android:textColor="@color/u_color_ffffff"
+        android:textSize="@dimen/dd_dimen_28px" />
+
+</LinearLayout>

@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <com.sz.ucar.bwued.lib.menu.UDropDownMenuTabLayout
+        android:id="@+id/flp_menu_tab_layout"
+        android:layout_width="0dp"
+        android:layout_height="@dimen/dd_dimen_90px"
+        android:background="@color/u_color_ffffff"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:menuContainerId="@id/flp_menu_container_layout"
+        app:u_divider="@drawable/u_divider_e5e5e5"
+        app:u_innerDividerPaddingLeft="@dimen/dd_dimen_11px"
+        app:u_innerDividerPaddingRight="@dimen/dd_dimen_11px"
+        app:u_showDividers="middle" />
+
+
+    <com.sz.ucar.bwued.lib.menu.UDropDownMenuContentLayout
+        android:id="@+id/flp_menu_container_layout"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="@dimen/dd_dimen_2px"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/flp_menu_tab_layout" />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="bbbbbbbaaaaaaa"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/flp_menu_tab_layout"/>
+</androidx.constraintlayout.widget.ConstraintLayout>

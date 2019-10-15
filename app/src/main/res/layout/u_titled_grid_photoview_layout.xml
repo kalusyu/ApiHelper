@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:grid_photo="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <com.sz.ucar.bwued.lib.gridphoto.UTitledGridPhotoView
+        android:id="@+id/tgpv_2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dd_dimen_50px"
+        grid_photo:gpv_columnNum="4"
+        grid_photo:gpv_count="5"
+        grid_photo:gpv_mode="limit_max"
+        grid_photo:tgpv_title="车辆行驶照片"
+        grid_photo:tgpv_titleHint="必填" />
+
+</LinearLayout>

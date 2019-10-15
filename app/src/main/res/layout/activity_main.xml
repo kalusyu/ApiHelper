@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".UDividerLinearLayoutDemo">
+
+
+    <com.sz.ucar.bwued.lib.UDividerLinearLayout
+        android:id="@+id/ud2"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:u_divider="@drawable/shape_demo"
+        app:u_showDividers="end"
+        app:u_innerDividerPaddingLeft="10dp"
+        app:u_innerDividerPaddingRight="30dp"
+        >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Hello World!" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Bottom Hello World!" />
+
+
+        <TextView
+            android:onClick="startCalender"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="I'm third order" />
+
+
+    </com.sz.ucar.bwued.lib.UDividerLinearLayout>
+
+
+    <com.sz.ucar.bwued.lib.UDividerLinearLayout
+        android:id="@+id/u3"
+        app:layout_constraintTop_toBottomOf="@id/ud2"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:u_divider="@drawable/shape_demo"
+        app:u_innerDividerPaddingLeft="3dp"
+        app:u_innerDividerPaddingRight="3dp"
+        android:layout_marginLeft="15dp"
+        app:u_showDividers="beginning"
+        >
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="100dp"
+            android:text="调整左前门上铰链总成"
+            />
+
+
+    </com.sz.ucar.bwued.lib.UDividerLinearLayout>
+
+    <com.sz.ucar.bwued.lib.UDividerLinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/u3"
+        app:u_divider="@drawable/divider"
+        app:u_innerDividerPaddingLeft="3dp"
+        app:u_innerDividerPaddingRight="3dp"
+        app:u_showDividers="middle">
+
+        <TextView
+            android:id="@+id/tv_item_number"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:text="项目 2" />
+
+        <TextView
+            android:id="@+id/tv_parts_number"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:text="配件 6" />
+
+    </com.sz.ucar.bwued.lib.UDividerLinearLayout>
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
