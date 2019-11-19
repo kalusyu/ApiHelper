@@ -8,9 +8,12 @@
         <option name="modules">
           <set>
             <option value="$PROJECT_DIR$" />
+            <option value="$PROJECT_DIR$/apihelper" />
+            <option value="$PROJECT_DIR$/apihelpertest" />
             <option value="$PROJECT_DIR$/app" />
             <option value="$PROJECT_DIR$/databindingdemo" />
             <option value="$PROJECT_DIR$/mylib" />
+            <option value="$PROJECT_DIR$/testapihelper" />
           </set>
         </option>
         <option name="resolveModulePerSourceSet" value="false" />

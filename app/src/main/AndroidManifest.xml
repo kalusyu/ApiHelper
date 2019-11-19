@@ -8,12 +8,51 @@
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
-        android:theme="@style/AppTheme">
+        android:theme="@style/demo_AppTheme">
         <activity android:name="com.sz.ucar.lib.demo.BwuedDemos">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+
+        <activity
+            android:name=".rxjava.DemoRxJavaActivity"
+            android:label="rxjava/DemoRxJavaActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.SAMPLE_CODE" />
+            </intent-filter>
+        </activity>
+
+
+        <activity
+            android:name=".okhttp3.DemoOkHttp3Activity"
+            android:label="okhttp3/DemoOkHttp3Activity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.SAMPLE_CODE" />
+            </intent-filter>
+        </activity>
+
+
+        <activity
+            android:name=".retrofit.DemoActivity"
+            android:label="retrofit/DemoActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.SAMPLE_CODE" />
+            </intent-filter>
+        </activity>
+
+        <activity
+            android:name=".md.DemoTextInputLayout"
+            android:label="md/DemoTextInputLayout">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.SAMPLE_CODE" />
             </intent-filter>
         </activity>
 
@@ -38,7 +77,7 @@
         <activity
             android:name=".UCalenderViewDemo"
             android:label="UCalenderView"
-            android:theme="@style/AppTheme.Activity1">
+            android:theme="@style/demo_AppTheme.Activity1">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
                 <category android:name="android.intent.category.SAMPLE_CODE" />
@@ -232,10 +271,29 @@
             </intent-filter>
         </activity>
 
+        <activity
+            android:name=".customview.UNodeProgressbarActivity"
+            android:label="customtview/UNodeProgressbarActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.SAMPLE_CODE" />
+            </intent-filter>
+        </activity>
+
 
         <activity android:name=".kitt.common.MyRouterActivity"></activity>
 
         <activity android:name=".kitt.common.MyAnotherRouterActivity"></activity>
+
+        <activity
+            android:name=".refresh.DemoSmartRefresh"
+            android:label="refresh/DemoSmartRefresh"
+            android:theme="@style/demo_AppTheme.Activity1">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.SAMPLE_CODE" />
+            </intent-filter>
+        </activity>
 
     </application>
 </manifest>

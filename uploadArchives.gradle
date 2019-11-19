@@ -1,0 +1,133 @@
+apply plugin: 'maven'
+
+uploadArchives {
+    repositories {
+        mavenDeployer {
+            def repoType = project.hasProperty("CI_APP_UPLOAD_REPO_TYPE") ? CI_APP_UPLOAD_REPO_TYPE : rootProject.ext.repoType
+            def repoUserName = project.hasProperty("CI_APP_UPLOAD_REPO_USERNAME") ? CI_APP_UPLOAD_REPO_USERNAME : NEXUS_USERNAME
+            def repoPassword = project.hasProperty("CI_APP_UPLOAD_REPO_PASSWORD") ? CI_APP_UPLOAD_REPO_PASSWORD : NEXUS_PASSWORD
+            println 'repoType : ' + repoType
+            if (repoType.equalsIgnoreCase("release")) {
+                def repoReleaseUrl = project.hasProperty("CI_APP_UPLOAD_REPO_URL") ? CI_APP_UPLOAD_REPO_URL : releaseRepositoryUrl
+                println 'repoReleaseUrl : ' + repoReleaseUrl
+                repository(url: repoReleaseUrl) {
+                    authentication(userName: repoUserName, password: repoPassword)
+                    moduleVersion_release.each {
+                        def module = it
+                        if (it.value.groupId == ARTIFACTID) {
+                            println 'ARTIFACTID : ' + ARTIFACTID
+                            def moduleVersion = module.value.version
+                            def moduleArtifactId = module.value.groupId
+                            def moduleGroupId = module.value.group
+                            if (project.hasProperty("CI_APP_UPLOAD_VERSION")
+                                    && project.hasProperty("CI_APP_UPLOAD_ARTIFACTID")
+                                    && project.hasProperty("CI_APP_UPLOAD_GROUP")) {
+                                if (CI_APP_UPLOAD_VERSION.toString().contains(",")
+                                        && CI_APP_UPLOAD_ARTIFACTID.toString().contains(",")
+                                        && CI_APP_UPLOAD_GROUP.toString().contains(",")) {
+                                    String[] versions = CI_APP_UPLOAD_VERSION.toString().split(",")
+                                    String[] actifactIds = CI_APP_UPLOAD_ARTIFACTID.toString().split(",")
+                                    String[] groups = CI_APP_UPLOAD_GROUP.toString().split(",")
+                                    int index = 0
+                                    for (int i = 0; i < actifactIds.length; i++) {
+                                        if (actifactIds[i].equalsIgnoreCase(ARTIFACTID)) {
+                                            index = i
+                                            break
+                                        }
+                                    }
+                                    moduleVersion = versions[index]
+                                    moduleArtifactId = actifactIds[index]
+                                    moduleGroupId = groups[index]
+                                } else {
+                                    moduleVersion = CI_APP_UPLOAD_VERSION
+                                    moduleArtifactId = CI_APP_UPLOAD_ARTIFACTID
+                                    moduleGroupId = CI_APP_UPLOAD_GROUP
+                                }
+                            }
+                            pom.project {
+                                version moduleVersion
+                                groupId moduleGroupId
+                                artifactId moduleArtifactId
+                                packaging module.value.type
+                                description module.value.description
+                            }
+                        }
+                    }
+                    pom.whenConfigured { pom ->
+                        pom.dependencies.forEach { dep ->
+                            if (dep.getVersion() == "unspecified") {
+                                moduleVersion_release.each {
+                                    if (dep.getArtifactId() == it.value.groupId) {
+                                        dep.setGroupId(it.value.group)
+                                        dep.setVersion(it.value.version)
+                                    }
+                                }
+                            }
+                        }
+                    }
+                    println '上传到远程正式仓库'
+                }
+            } else if (repoType.equalsIgnoreCase("snapshot")) {
+                def repoSnapshotUrl = project.hasProperty("CI_APP_UPLOAD_REPO_URL") ? CI_APP_UPLOAD_REPO_URL : snapshotRepositoryUrl
+                println 'repoSnapshotUrl : ' + repoSnapshotUrl
+                repository(url: repoSnapshotUrl) {
+                    authentication(userName: repoUserName, password: repoPassword)
+                    moduleVersion_snapshot.each {
+                        def module = it
+                        if (it.value.groupId == ARTIFACTID) {
+                            println 'ARTIFACTID : ' + ARTIFACTID
+                            def moduleVersion = module.value.version
+                            def moduleArtifactId = module.value.groupId
+                            def moduleGroupId = module.value.group
+                            if (project.hasProperty("CI_APP_UPLOAD_VERSION")
+                                    && project.hasProperty("CI_APP_UPLOAD_ARTIFACTID")
+                                    && project.hasProperty("CI_APP_UPLOAD_GROUP")) {
+                                if (CI_APP_UPLOAD_VERSION.toString().contains(",")
+                                        && CI_APP_UPLOAD_ARTIFACTID.toString().contains(",")
+                                        && CI_APP_UPLOAD_GROUP.toString().contains(",")) {
+                                    String[] versions = CI_APP_UPLOAD_VERSION.toString().split(",")
+                                    String[] actifactIds = CI_APP_UPLOAD_ARTIFACTID.toString().split(",")
+                                    String[] groups = CI_APP_UPLOAD_GROUP.toString().split(",")
+                                    int index = 0
+                                    for (int i = 0; i < actifactIds.length; i++) {
+                                        if (actifactIds[i].equalsIgnoreCase(ARTIFACTID)) {
+                                            index = i
+                                            break
+                                        }
+                                    }
+                                    moduleVersion = versions[index]
+                                    moduleArtifactId = actifactIds[index]
+                                    moduleGroupId = groups[index]
+                                } else {
+                                    moduleVersion = CI_APP_UPLOAD_VERSION
+                                    moduleArtifactId = CI_APP_UPLOAD_ARTIFACTID
+                                    moduleGroupId = CI_APP_UPLOAD_GROUP
+                                }
+                            }
+                            pom.project {
+                                version moduleVersion
+                                groupId moduleGroupId
+                                artifactId moduleArtifactId
+                                packaging module.value.type
+                                description module.value.description
+                            }
+                        }
+                    }
+                    pom.whenConfigured { pom ->
+                        pom.dependencies.forEach { dep ->
+                            if (dep.getVersion() == "unspecified") {
+                                moduleVersion_snapshot.each {
+                                    if (dep.getArtifactId() == it.value.groupId) {
+                                        dep.setGroupId(it.value.group)
+                                        dep.setVersion(it.value.version)
+                                    }
+                                }
+                            }
+                        }
+                    }
+                    println '上传到远程测试仓库'
+                }
+            }
+        }
+    }
+}

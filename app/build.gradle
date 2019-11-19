@@ -1,6 +1,7 @@
+apply from: '../uploadArchives.gradle'
 apply plugin: 'com.android.application'
-apply plugin: 'kotlin-android'
-apply plugin: 'kotlin-android-extensions'
+//apply plugin: 'kotlin-android'
+//apply plugin: 'kotlin-android-extensions'
 //apply plugin: 'kotlin-kapt'
 
 android {
@@ -75,7 +76,7 @@ dependencies {
     implementation "com.sz.ucar:apihelper:0.1.9-SNAPSHOT"
 //    implementation "com.sz.ucar:bwued:0.0.86-SNAPSHOT"
     implementation "com.sz.ucar:bwued:${lastest_version}"
-    implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
+//    implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
     implementation 'com.android.support.constraint:constraint-layout:1.1.3'
     api "com.sz.bw.cardock:bizbase:${bizbaseVersion}"
 //    implementation "com.google.auto.service:auto-service:1.0-rc3"
@@ -97,5 +98,13 @@ dependencies {
 //    lintPublish "" // lint检查包含到 包中
 //    freeImplementation ""
 //    proImplementation ""
+
+    // https://mvnrepository.com/artifact/com.scwang.smartrefresh/SmartRefreshLayout
+    implementation group: 'com.scwang.smartrefresh', name: 'SmartRefreshLayout', version: '1.1.0'
+    implementation group: 'com.scwang.smartrefresh', name: 'SmartRefreshHeader', version: '1.1.0-andx-15'
+
+    // https://mvnrepository.com/artifact/com.google.android.material/material
+    implementation group: 'com.google.android.material', name: 'material', version: '1.2.0-alpha01'
+
 
 }

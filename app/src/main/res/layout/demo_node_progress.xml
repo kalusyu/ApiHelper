@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <com.sz.ucar.lib.demo.customview.view.UNodeProgressbar
+        android:id="@+id/u_node_progress_bar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:nodesNum="4"
+        app:processingLineColor="@color/colorAccent"
+        app:currNodeState="1"
+        app:currNodeNO="2"
+        app:nodeRadius="10dp"
+        app:unprogressingDrawable="@drawable/un_progress"
+        app:progressingDrawable="@drawable/complete_progress"
+        app:progresFailDrawable="@drawable/progress_failed"
+        app:progresSuccDrawable="@drawable/complete_progress"
+
+        />
+
+</LinearLayout>
