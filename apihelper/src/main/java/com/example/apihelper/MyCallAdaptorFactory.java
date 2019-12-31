@@ -19,7 +19,7 @@ class MyCallAdaptorFactory extends CallAdapter.Factory {
     @Override
     public CallAdapter<?, ?> get(Type returnType, Annotation[] annotations, Retrofit retrofit) {
         Type rawType = getRawType(returnType);
-        if (rawType != MyCall.class) {
+        if (rawType != UCall.class) {
             return null;
         }
 
@@ -28,7 +28,7 @@ class MyCallAdaptorFactory extends CallAdapter.Factory {
         return new MyCallAdapter<>(reponseType);
     }
 
-    private static class MyCallAdapter<T> implements CallAdapter<MyResponse<T>, MyCall<T>> {
+    private static class MyCallAdapter<T> implements CallAdapter<UResponse<T>, UCall<T>> {
 
         private Type responseType;
 
@@ -38,12 +38,12 @@ class MyCallAdaptorFactory extends CallAdapter.Factory {
 
         @Override
         public Type responseType() {
-            return new MyParameterizeImpl(new Type[]{responseType}, null, MyResponse.class);
+            return new MyParameterizeImpl(new Type[]{responseType}, null, UResponse.class);
         }
 
         @Override
-        public MyCall<T> adapt(Call<MyResponse<T>> call) {
-            return new MyCall<>(call);
+        public UCall<T> adapt(Call<UResponse<T>> call) {
+            return new UCall<>(call);
         }
     }
 }

@@ -1,7 +1,7 @@
 package com.example.apihelpertest;
 
 
-import com.example.apihelper.MyCall;
+import com.example.apihelper.UCall;
 
 import retrofit2.http.POST;
 
@@ -12,5 +12,5 @@ import retrofit2.http.POST;
 public interface IMyInterface {
 
     @POST("api/getPerson")
-    MyCall<Person> getPerson();
+    UCall<Person> getPerson();
 }

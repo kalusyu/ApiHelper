@@ -13,7 +13,7 @@ import retrofit2.converter.gson.GsonConverterFactory;
 public class ApiHelper {
 
     /**
-     * 1. MyResponse 2. MyCall 3. MyObservable 4. MyCallAdaptorFactory 5. MyParameterizeImpl 6. MyInterceptor 7.
+     * 1. UResponse 2. UCall 3. MyObservable 4. MyCallAdaptorFactory 5. MyParameterizeImpl 6. MyInterceptor 7.
      */
 
     private static class Holder {

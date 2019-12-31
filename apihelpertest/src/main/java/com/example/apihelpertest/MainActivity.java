@@ -5,8 +5,8 @@ import android.widget.TextView;
 
 import com.example.apihelper.ApiHelper;
 import com.example.apihelper.IApiInfo;
-import com.example.apihelper.MyCall;
-import com.example.apihelper.MyResponse;
+import com.example.apihelper.UCall;
+import com.example.apihelper.UResponse;
 import com.example.apihelper.OnCallBackListener;
 
 import androidx.appcompat.app.AppCompatActivity;
@@ -19,10 +19,10 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
         IMyInterface service = ApiHelper.get()
                                         .getMyService(new Service());
-        MyCall<Person> call = service.getPerson();
+        UCall<Person> call = service.getPerson();
         call.enqueue(new OnCallBackListener<Person>() {
             @Override
-            public void onSuccess(MyResponse<Person> response) {
+            public void onSuccess(UResponse<Person> response) {
                 TextView textView = findViewById(R.id.textView);
                 textView.setText("name: " + response.getContent()
                                                     .getName() + ",age = " + response.getContent()

@@ -1,2 +1,2 @@
-include ':app', ':mylib', ':databindingdemo', ':apihelper', ':testapihelper', ':apihelpertest'
+include ':mylib', ':databindingdemo', ':apihelper', ':testapihelper', ':apihelpertest'
 rootProject.name='My Application'
